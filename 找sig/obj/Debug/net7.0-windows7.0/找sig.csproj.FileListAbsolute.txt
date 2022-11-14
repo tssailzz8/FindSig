@@ -1,0 +1,15 @@
+G:\c#\找sig\找sig\找sig\bin\Debug\net7.0-windows7.0\找sig.exe
+G:\c#\找sig\找sig\找sig\bin\Debug\net7.0-windows7.0\找sig.deps.json
+G:\c#\找sig\找sig\找sig\bin\Debug\net7.0-windows7.0\找sig.runtimeconfig.json
+G:\c#\找sig\找sig\找sig\bin\Debug\net7.0-windows7.0\找sig.dll
+G:\c#\找sig\找sig\找sig\bin\Debug\net7.0-windows7.0\找sig.pdb
+G:\c#\找sig\找sig\找sig\obj\Debug\net7.0-windows7.0\找sig.csproj.AssemblyReference.cache
+G:\c#\找sig\找sig\找sig\obj\Debug\net7.0-windows7.0\找sig.GeneratedMSBuildEditorConfig.editorconfig
+G:\c#\找sig\找sig\找sig\obj\Debug\net7.0-windows7.0\找sig.AssemblyInfoInputs.cache
+G:\c#\找sig\找sig\找sig\obj\Debug\net7.0-windows7.0\找sig.AssemblyInfo.cs
+G:\c#\找sig\找sig\找sig\obj\Debug\net7.0-windows7.0\找sig.csproj.CoreCompileInputs.cache
+G:\c#\找sig\找sig\找sig\obj\Debug\net7.0-windows7.0\找sig.dll
+G:\c#\找sig\找sig\找sig\obj\Debug\net7.0-windows7.0\refint\找sig.dll
+G:\c#\找sig\找sig\找sig\obj\Debug\net7.0-windows7.0\找sig.pdb
+G:\c#\找sig\找sig\找sig\obj\Debug\net7.0-windows7.0\找sig.genruntimeconfig.cache
+G:\c#\找sig\找sig\找sig\obj\Debug\net7.0-windows7.0\ref\找sig.dll
