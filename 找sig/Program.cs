@@ -39,8 +39,10 @@ namespace 找sig
 			{
 				case "y":
 				case "Y":
+				case "89":
 					flag = true;
 					break;
+				case "78":
 				case "n":
 				case "N":
 					flag = false;

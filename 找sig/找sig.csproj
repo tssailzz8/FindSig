@@ -6,6 +6,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <!--AOT 相关-->
 	  <PublishAot>true</PublishAot>
 	  <TrimMode>full</TrimMode>
 	  <RunAOTCompilation>True</RunAOTCompilation>
@@ -18,8 +19,9 @@
 	  <HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>
 	  <MetadataUpdaterSupport>true</MetadataUpdaterSupport>
 	  <UseSystemResourceKeys>true</UseSystemResourceKeys>
-	  <IlcDisableReflection>true</IlcDisableReflection>
+	  <IlcDisableReflection >true</IlcDisableReflection>
 	  <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+
   </PropertyGroup>
 
   <ItemGroup>
