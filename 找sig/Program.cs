@@ -9,6 +9,7 @@ namespace 找sig
 	internal class Program
 	{
 		public static Dictionary<string, Infor> sig = new Dictionary<string, Infor>();
+		public static bool flag = false;
 		static void Main(string[] args)
 		{
 			string 目录位置 = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
@@ -32,14 +33,15 @@ namespace 找sig
 			Console.WriteLine("输入插件文件夹位置");
 			var plugins = Console.ReadLine();
 			Console.WriteLine("是否只输出未找到:请输入y或者n");
-			var 是否只输出没找到 = Console.ReadKey().Key.ToString();
+			var 是否只输出没找到 = Console.ReadKey().Key.ToString().ToUpper();
 			Console.WriteLine("");
-			bool flag = false; ;
 			switch (是否只输出没找到)
 			{
+				case "y":
 				case "Y":
 					flag = true;
 					break;
+				case "n":
 				case "N":
 					flag = false;
 					break;
@@ -53,18 +55,20 @@ namespace 找sig
 			foreach (var item in sig)
 			{
 				var a = offest.ScanText(item.Key);
-				if (a>0&&flag)
+				if (a>0)
 				{
-					var b = a + 0x140000000;
-					Console.WriteLine($"找到{item.Key}的偏移为{b:x4},文件在{item.Value.path}的{item.Value.line}行");
+					if (!flag)
+					{
+						var b = a + 0x140000000;
+						Console.WriteLine($"找到{item.Key}的偏移为{b:x4},文件在{item.Value.path}的{item.Value.line}行");
+					}
+					
 				}
 				else
 				{
 					
-					
-						Console.WriteLine($"没找到{item.Key}的偏移,文件在{item.Value.path}的{item.Value.line}行");
-					
-					
+					Console.WriteLine($"没找到{item.Key}的偏移,文件在{item.Value.path}的{item.Value.line}行");
+
 				}
 			}
 			offest.UnInitialize();
@@ -94,7 +98,11 @@ namespace 找sig
 							}
 							else
 							{
-								var pattern = "\\\"(([0-9a-fA-F?]{2}|\\?) )*([0-9a-fA-F?]{2}|\\?)\\\"";
+								if (text.StartsWith("//"))
+								{
+									break;
+								}
+								var pattern = "\"([A-Fa-f0-9\\? ]{10,200})\"";
 								if (System.Text.RegularExpressions.Regex.IsMatch(text, pattern))
 								{
 									var result = System.Text.RegularExpressions.Regex.Match(text, pattern).Groups[1].Value;
